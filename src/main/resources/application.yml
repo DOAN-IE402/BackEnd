@@ -1,0 +1,50 @@
+spring:
+  application:
+    name: IE307_BackEnd
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/moteldb?useSSL=false&characterEncoding=utf8
+    # url: jdbc:mysql://google/moteldb?cloudSqlInstance=motel-242404:asia-southeast1:moteldb&socketFactory=com.google.cloud.sql.mysql.SocketFactory&user=root&password=123&useSSL=false
+    username: root
+    password: vunam2003333
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: create
+
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 200MB
+      max-request-size: 215MB
+      # location: D:/temp
+
+# logging:
+#   level:
+#     org:
+#       hibernate:
+#         SQL: DEBUG
+#         type: TRACE
+
+oauth2:
+  client-id: clientIdPassword
+  client-secret: 123
+  grand-types: password,refresh_token,authorization_code
+  scopes: read
+  access-token-expire-in: 3600
+  refresh-token-expire-in: 7200
+
+key:
+  file-name: kt3key.jks
+  file-password: hdkey@
+  alias: oauth2
+  alias-password: hdkt3!
+
+idea:
+  max:
+    intellisense:
+      filesize: 2500
